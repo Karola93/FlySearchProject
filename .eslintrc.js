@@ -2,12 +2,14 @@ module.exports = {
     "env": {
         "browser": true,
         "es2021": true,
-        "node": true
+        "node": true,
+        "jest": true
     },
     "extends": [
         "eslint:recommended",
         "plugin:react/recommended",
-        "plugin:@typescript-eslint/recommended"
+        "plugin:@typescript-eslint/recommended",
+        "prettier"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -19,8 +21,15 @@ module.exports = {
     },
     "plugins": [
         "react",
-        "@typescript-eslint"
+        "@typescript-eslint",
+        "react-hooks",
+        "prettier"
     ],
     "rules": {
+    },
+    "settings": {
+        "import/resolver": {
+            "typescript": {}
+        }
     }
 }
