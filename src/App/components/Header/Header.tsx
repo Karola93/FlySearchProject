@@ -14,8 +14,8 @@ function Header() {
         <Image src="../../../public/logo.png" name="logo" />
       </div>
       <div>
-        <Button className={classes.button} text="Log in" />
-        <Button className={classes.button} text="Sign in" />
+        <Button text="Log in" />
+        <Button text="Sign in" />
       </div>
     </div>
   );
