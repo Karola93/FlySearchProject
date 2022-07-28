@@ -1,23 +1,25 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
 import React from 'react';
 
-import './App.css';
-// eslint-disable-next-line import/extensions
+import { useSelector } from 'react-redux';
+import Auth from './components/User/Auth';
 import SearchBox from './components/SearchBox/SearchBox';
-// eslint-disable-next-line import/extensions
 import Footer from './components/Footer/Footer';
-// eslint-disable-next-line import/extensions
 import BestOffers from './components/BestOffers/BestOffers';
-// eslint-disable-next-line import/extensions
 import Header from './components/Header/Header';
+import './App.css';
+import UserProfile from './components/User/UserProfile';
 
 function App() {
+  const isAuth = useSelector((state) => state.auth.isAuthenticated);
   return (
-    <section className="container">
+    <section style={{ display: 'inline-block' }} className="container">
       <Header />
-      <h2>Sialalal</h2>
+      {!isAuth && <Auth />}
+      {isAuth && <UserProfile />}
       <SearchBox />
       <BestOffers />
-      <h3>Sialalal</h3>
       <Footer />
     </section>
   );

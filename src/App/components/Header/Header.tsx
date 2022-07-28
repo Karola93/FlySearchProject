@@ -1,12 +1,11 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Image from 'App/components/Reuse/Image';
 import Button from 'App/components/Reuse/Button';
 import classes from './Header.module.css';
 import { authActions } from '../../store/auth';
-// eslint-disable-next-line import/extensions,import/no-unresolved
-// eslint-disable-next-line import/extensions,import/no-unresolved,import/no-duplicates
-// eslint-disable-next-line import/extensions,import/no-duplicates
 
 function Header() {
   const dispatch = useDispatch();
@@ -17,7 +16,7 @@ function Header() {
   };
 
   return (
-    <headrer className={classes.header}>
+    <header className={classes.header}>
       <div>
         <Image src="../../../public/logo.png" name="logo" />
       </div>
@@ -46,7 +45,7 @@ function Header() {
           </section>
         )}
       </div>
-    </headrer>
+    </header>
   );
 }
 
