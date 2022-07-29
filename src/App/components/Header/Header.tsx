@@ -18,8 +18,9 @@ function Header() {
   return (
     <header className={classes.header}>
       <div>
-        <Image src="../../../public/logo.png" name="logo" />
+        <Image src="../../../public/logo.png" name="logo" alt="logo" />
       </div>
+      <h1>FlySearch</h1>
       <div>
         {!isAuth && (
           <section>

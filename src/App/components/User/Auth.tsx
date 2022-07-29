@@ -25,7 +25,7 @@ function Auth() {
           <div className={classes.control}>
             <Input type="password" id="password" min={8} />
           </div>
-          <Button text="Login" type="submit" />
+          <Button className={classes.btn} text="Login" type="submit" />
         </form>
       </section>
     </main>

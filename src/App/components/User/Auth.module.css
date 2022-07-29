@@ -27,3 +27,12 @@
     padding: 0.25rem;
     border: 1px solid #ccc;
 }
+
+.btn {
+    font-size: 1.25rem;
+    background-color: #3cb1fc;
+    border: 1px solid #3cb1fc;
+    padding: 0.5rem 1.5rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    color: #2c2922;
+}
