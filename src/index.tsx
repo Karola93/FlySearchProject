@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-
 import { Provider } from 'react-redux';
 // eslint-disable-next-line import/extensions
 import store from './App/store/index';
