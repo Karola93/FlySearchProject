@@ -12,11 +12,15 @@ function Auth() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  const user = {
+    email,
+    password
+  };
+
   const loginHandler = (e) => {
     e.preventDefault();
     dispatch(authActions.login());
-    localStorage.setItem('email', email);
-    localStorage.setItem('password', password);
+    localStorage.setItem('user', JSON.stringify(user));
   };
 
   return (
