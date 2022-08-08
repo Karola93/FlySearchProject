@@ -9,13 +9,10 @@ import { authActions } from 'App/store/auth';
 
 function Auth() {
   const dispatch = useDispatch();
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-
-  const user = {
-    email,
-    password
-  };
+  const [user, setUser] = useState({
+    email: '',
+    password: ''
+  });
 
   const loginHandler = (e) => {
     e.preventDefault();
@@ -33,15 +30,31 @@ function Auth() {
             <Input
               type="email"
               id="email"
-              value={email}
-              onChange={(e) => {
-                setEmail(e.target.value);
-              }}
+              value={user.email}
+              /* eslint-disable-next-line @typescript-eslint/no-shadow */
+              onChange={(e) =>
+                setUser((user) => ({
+                  ...user,
+                  email: e.target.value
+                }))
+              }
             />
           </label>
         </div>
         <div className={classes.control}>
-          <Input type="password" value={password} id="password" min={8} onChange={(e) => setPassword(e.target.value)} />
+          <Input
+            type="password"
+            value={user.password}
+            id="password"
+            min={8}
+            /* eslint-disable-next-line @typescript-eslint/no-shadow */
+            onChange={(e) =>
+              setUser((user) => ({
+                ...user,
+                password: e.target.value
+              }))
+            }
+          />
         </div>
         <Button className={classes.btn} text="Login" type="submit" />
       </form>
