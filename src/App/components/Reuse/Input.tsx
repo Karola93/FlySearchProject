@@ -3,8 +3,18 @@
 import React from 'react';
 
 function Input(props) {
-  // eslint-disable-next-line react/prop-types,react/destructuring-assignment
-  return <input type={props.type} minLength={props.min} />;
+  return (
+    <input
+      /* eslint-disable-next-line react/destructuring-assignment,react/prop-types */
+      type={props.type}
+      /* eslint-disable-next-line react/destructuring-assignment,react/prop-types */
+      minLength={props.min}
+      /* eslint-disable-next-line react/destructuring-assignment,react/prop-types */
+      value={props.value}
+      /* eslint-disable-next-line react/destructuring-assignment,react/prop-types */
+      onChange={props.onChange}
+    />
+  );
 }
 
 export default Input;
