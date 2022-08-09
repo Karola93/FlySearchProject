@@ -2,10 +2,10 @@
 // @ts-nocheck
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import Button from 'App/components/Reuse/Button';
 import Input from 'App/components/Reuse/Input';
 import classes from 'App/components/User/Auth.module.css';
 import { authActions } from 'App/store/auth';
+import Button from 'App/components/Reuse/Button';
 
 function Auth() {
   const dispatch = useDispatch();
