@@ -32,12 +32,10 @@ function Auth() {
               id="email"
               value={user.email}
               /* eslint-disable-next-line @typescript-eslint/no-shadow */
-              onChange={(e) =>
-                setUser((user) => ({
-                  ...user,
-                  email: e.target.value
-                }))
-              }
+              onChange={(e) => setUser((user) => ({
+                ...user,
+                email: e.target.value
+              }))}
             />
           </label>
         </div>
@@ -48,12 +46,10 @@ function Auth() {
             id="password"
             min={8}
             /* eslint-disable-next-line @typescript-eslint/no-shadow */
-            onChange={(e) =>
-              setUser((user) => ({
-                ...user,
-                password: e.target.value
-              }))
-            }
+            onChange={(e) => setUser((user) => ({
+              ...user,
+              password: e.target.value
+            }))}
           />
         </div>
         <Button className={classes.btn} text="Login" type="submit" />
