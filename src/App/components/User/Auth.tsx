@@ -26,29 +26,30 @@ function Auth() {
     <main className={classes.auth}>
       <form onSubmit={loginHandler}>
         <div className={classes.control}>
-          <label>
+          <label htmlFor="email">
             Email: <br />
-            <Input
-              type="email"
-              id="email"
-              value={user.email}
-              /* eslint-disable-next-line @typescript-eslint/no-shadow */
-              onChange={(e) =>
-                setUser((user) => ({
-                  ...user,
-                  email: e.target.value
-                }))
-              }
-            />
           </label>
+          <Input
+            type="email"
+            id="email"
+            value={user.email}
+            onChange={(e) =>
+              setUser((user) => ({
+                ...user,
+                email: e.target.value
+              }))
+            }
+          />
         </div>
         <div className={classes.control}>
+          <label htmlFor="password">
+            Password: <br />
+          </label>
           <Input
             type="password"
             value={user.password}
             id="password"
             min={8}
-            /* eslint-disable-next-line @typescript-eslint/no-shadow */
             onChange={(e) =>
               setUser((user) => ({
                 ...user,
