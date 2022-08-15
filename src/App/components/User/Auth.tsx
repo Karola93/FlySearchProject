@@ -1,14 +1,16 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheckgi
+// @ts-nocheck
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import Button from 'App/components/Reuse/Button';
 import Input from 'App/components/Reuse/Input';
 import classes from 'App/components/User/Auth.module.css';
 import { authActions } from 'App/store/auth';
+import Button from 'App/components/Reuse/Button';
+import { useNavigate } from 'react-router-dom';
 
 function Auth() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [user, setUser] = useState({
     email: '',
     password: ''
@@ -24,7 +26,6 @@ function Auth() {
     <main className={classes.auth}>
       <form onSubmit={loginHandler}>
         <div className={classes.control}>
-          {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
           <label>
             Email: <br />
             <Input

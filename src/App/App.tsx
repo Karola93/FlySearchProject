@@ -1,27 +1,30 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
 import React from 'react';
+import { Route } from 'react-router-dom';
+import Switch from 'react-router';
 
-import { useSelector } from 'react-redux';
+import Layout from 'App/components/layout/Layout';
+import HomePage from 'App/pages/HomePage';
 import Auth from './components/User/Auth';
-import SearchBox from './components/SearchBox/SearchBox';
-import Footer from './components/Footer/Footer';
-import BestOffers from './components/BestOffers/BestOffers';
-import Header from './components/Header/Header';
 
 import UserProfile from './components/User/UserProfile';
 
 function App() {
-  const isAuth = useSelector((state) => state.auth.isAuthenticated);
   return (
-    <>
-      <Header />
-      {!isAuth && <Auth />}
-      {isAuth && <UserProfile />}
-      <SearchBox />
-      <BestOffers />
-      <Footer />
-    </>
+    <Layout>
+      <Switch>
+        <Route path="/" exact>
+          <HomePage />
+        </Route>
+        <Route path="/auth">
+          <Auth />
+        </Route>
+        <Route path="/userProfile">
+          <UserProfile />
+        </Route>
+      </Switch>
+    </Layout>
   );
 }
 
