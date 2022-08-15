@@ -2,12 +2,15 @@
 // @ts-nocheck
 
 import React, { useState } from 'react';
-import classes from 'App/components/User/Auth.module.css';
+import classes from 'App/components/User/SignIn.module.css';
 import Input from 'App/components/Reuse/Input';
 import Button from 'App/components/Reuse/Button';
 import { useNavigate } from 'react-router-dom';
+import { authActions } from 'App/store/auth';
+import { useDispatch } from 'react-redux';
 
 function SignIn() {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const [newUser, setNewUser] = useState({
     email: '',
@@ -16,11 +19,13 @@ function SignIn() {
 
   function signinHandler(e) {
     e.preventDefault();
-    localStorage.setItem('user', JSON.stringify(newUser));
+    dispatch(authActions.login());
+    navigate('/');
+    localStorage.setItem('newUser', JSON.stringify(newUser));
   }
 
   return (
-    <main className={classes.auth}>
+    <main className={classes.signin}>
       <form onSubmit={signinHandler}>
         <div className={classes.control}>
           <label htmlFor="email">
@@ -55,7 +60,7 @@ function SignIn() {
             }
           />
         </div>
-        <Button className={classes.btn} text="Login" type="submit" />
+        <Button className={classes.btn} text="Sign in" type="submit" />
       </form>
     </main>
   );

@@ -16,11 +16,12 @@ function Auth() {
     password: ''
   });
 
-  const loginHandler = (e) => {
+  function loginHandler(e) {
     e.preventDefault();
     dispatch(authActions.login());
+    navigate('/');
     localStorage.setItem('user', JSON.stringify(user));
-  };
+  }
 
   return (
     <main className={classes.auth}>
