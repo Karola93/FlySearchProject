@@ -1,31 +1,32 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
+
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import classes from 'App/components/User/SignIn.module.css';
 import Input from 'App/components/Reuse/Input';
-import classes from 'App/components/User/Auth.module.css';
-import { authActions } from 'App/store/auth';
 import Button from 'App/components/Reuse/Button';
 import { useNavigate } from 'react-router-dom';
+import { authActions } from 'App/store/auth';
+import { useDispatch } from 'react-redux';
 
-function Auth() {
+function SignIn() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const [user, setUser] = useState({
+  const [newUser, setNewUser] = useState({
     email: '',
     password: ''
   });
 
-  function loginHandler(e) {
+  function signinHandler(e) {
     e.preventDefault();
     dispatch(authActions.login());
     navigate('/');
-    localStorage.setItem('user', JSON.stringify(user));
+    localStorage.setItem('newUser', JSON.stringify(newUser));
   }
 
   return (
-    <main className={classes.auth}>
-      <form onSubmit={loginHandler}>
+    <main className={classes.signin}>
+      <form onSubmit={signinHandler}>
         <div className={classes.control}>
           <label htmlFor="email">
             Email: <br />
@@ -33,9 +34,9 @@ function Auth() {
           <Input
             type="email"
             id="email"
-            value={user.email}
+            value={newUser.email}
             onChange={(e) =>
-              setUser((user) => ({
+              setNewUser((user) => ({
                 ...user,
                 email: e.target.value
               }))
@@ -48,21 +49,21 @@ function Auth() {
           </label>
           <Input
             type="password"
-            value={user.password}
+            value={newUser.password}
             id="password"
             min={8}
             onChange={(e) =>
-              setUser((user) => ({
+              setNewUser((user) => ({
                 ...user,
                 password: e.target.value
               }))
             }
           />
         </div>
-        <Button className={classes.btn} text="Login" type="submit" />
+        <Button className={classes.btn} text="Sign in" type="submit" />
       </form>
     </main>
   );
 }
 
-export default Auth;
+export default SignIn;
