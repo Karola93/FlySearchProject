@@ -46,7 +46,6 @@ function MainNavigation() {
               <Link to="/basket">Basket</Link>
             </li>
             <li>
-              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
               <Link to="/">
                 <button type="submit" onClick={logoutHandler}>
                   Logout

@@ -1,7 +1,8 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
+import Switch from 'react-router';
 
 import Layout from 'App/components/layout/Layout';
 import HomePage from 'App/pages/HomePage';
