@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Image from 'App/components/Reuse/Image';
 import { authActions } from 'App/store/auth';
 import classes from './MainNavigation.module.css';
+import logo from 'logo-1.png';
 
 function MainNavigation() {
   const dispatch = useDispatch();
@@ -18,10 +19,10 @@ function MainNavigation() {
 
   return (
     <header className={classes.header}>
-      <div>
-        <Image src="../../../public/logo.png" name="logo" alt="logo" />
+      <div className={classes.logo}>
+        <Image src={logo} alt="logo" width="70px" height="70px" />
+        <h1>FlySearch</h1>
       </div>
-      <h1>FlySearch</h1>
       <nav>
         {!isAuth && (
           <ul>
