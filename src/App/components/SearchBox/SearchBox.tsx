@@ -3,6 +3,7 @@
 import React from 'react';
 
 import classes from './SearchBox.module.css';
+import Button from 'App/components/Reuse/Button';
 
 function SearchBox() {
   return (
@@ -17,15 +18,17 @@ function SearchBox() {
       </div>
       <div>
         <label htmlFor="from">From</label>
-        <input id="from" />
+        <input type="text" id="from" />
         <label htmlFor="to">To</label>
-        <input id="to" />
+        <input type="text" id="to" />
       </div>
       <div>
         <div></div>
         <div></div>
       </div>
-      <div></div>
+      <div>
+        <Button type="text" text="Search" />
+      </div>
     </form>
   );
 }
