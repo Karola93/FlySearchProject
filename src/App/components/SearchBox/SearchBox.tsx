@@ -5,7 +5,24 @@ import React from 'react';
 import classes from './SearchBox.module.css';
 
 function SearchBox() {
-  return <div className={classes.box}>SearchBox</div>;
+  return (
+    <form className={classes.box}>
+      <div>
+        <label>
+          <input type="radio" /> Oneway
+        </label>
+        <label>
+          <input type="radio" /> There and back
+        </label>
+      </div>
+      <div></div>
+      <div>
+        <div></div>
+        <div></div>
+      </div>
+      <div></div>
+    </form>
+  );
 }
 
 export default SearchBox;
