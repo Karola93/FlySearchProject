@@ -7,6 +7,7 @@ import classes from 'App/components/User/Auth.module.css';
 import { authActions } from 'App/store/auth';
 import Button from 'App/components/Reuse/Button';
 import { useNavigate } from 'react-router-dom';
+import { useCookies } from 'react-cookie';
 
 function Auth() {
   const dispatch = useDispatch();
@@ -15,12 +16,14 @@ function Auth() {
     email: '',
     password: ''
   });
+  const [cookies, setCookies] = useCookies(['']);
 
   function loginHandler(e) {
     e.preventDefault();
     dispatch(authActions.login());
     navigate('/');
     localStorage.setItem('user', JSON.stringify(user));
+    setCookies('user', user);
   }
 
   return (
