@@ -9,13 +9,18 @@ function SearchBox() {
     <form className={classes.box}>
       <div>
         <label>
-          <input type="radio" /> Oneway
+          <input type="radio" /> One way
         </label>
         <label>
-          <input type="radio" /> There and back
+          <input type="radio" /> Roundtrip
         </label>
       </div>
-      <div></div>
+      <div>
+        <label htmlFor="from">From</label>
+        <input id="from" />
+        <label htmlFor="to">To</label>
+        <input id="to" />
+      </div>
       <div>
         <div></div>
         <div></div>
