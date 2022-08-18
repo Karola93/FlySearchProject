@@ -6,7 +6,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Image from 'App/components/Reuse/Image';
 import { authActions } from 'App/store/auth';
-import classes from './MainNavigation.module.css';
+import classes from 'App/components/layout/MainNavigation.module.scss';
 import logo from 'logo-1.png';
 
 function MainNavigation() {

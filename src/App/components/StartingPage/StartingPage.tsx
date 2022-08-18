@@ -1,4 +1,4 @@
-import classes from './StartingPage.module.css';
+import classes from 'App/components/StartingPage/StartingPage.module.scss';
 
 function StartingPageContent() {
   return (

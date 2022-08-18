@@ -1,7 +1,7 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
 import React from 'react';
-import classes from './Button.module.css';
+import classes from 'App/components/Reuse/Button.module.scss';
 
 function Button(props) {
   return (
