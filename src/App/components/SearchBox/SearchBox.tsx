@@ -5,7 +5,7 @@ import Button from 'App/components/Reuse/Button';
 
 function SearchBox() {
   return (
-    <form className={classes.box}>
+    <form className={classes.search}>
       <div>
         <label>
           <input type="radio" /> One way
@@ -26,11 +26,20 @@ function SearchBox() {
           <input type="text" id="to" />
           <label htmlFor="return"> Return </label>
           <input type="text" id="return" />
+          <label htmlFor="travelers"> Travelers </label>
+          <select name="travelers" id="travelers">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
         </div>
         <div></div>
       </div>
       <div>
-        <Button type="text" text="Search" />
+        <Button type="submit" text="Search" />
       </div>
     </form>
   );
