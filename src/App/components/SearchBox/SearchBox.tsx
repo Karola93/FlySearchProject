@@ -27,14 +27,7 @@ function SearchBox() {
           <label htmlFor="return"> Return </label>
           <input type="text" id="return" />
           <label htmlFor="travelers"> Travelers </label>
-          <select name="travelers" id="travelers">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-          </select>
+          <input type="number" id="travelers" min="1" style={{ width: 35 }} />
         </div>
         <div></div>
       </div>
