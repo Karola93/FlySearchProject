@@ -2,7 +2,7 @@
 // @ts-nocheck
 
 import React, { useState } from 'react';
-import classes from 'App/components/User/SignIn.module.css';
+import classes from 'App/components/User/SignIn.module.scss';
 import Input from 'App/components/Reuse/Input';
 import Button from 'App/components/Reuse/Button';
 import { useNavigate } from 'react-router-dom';

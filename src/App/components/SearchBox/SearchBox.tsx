@@ -2,7 +2,7 @@
 // @ts-nocheck
 import React from 'react';
 
-import classes from './SearchBox.module.css';
+import classes from 'App/components/SearchBox/SearchBox.module.scss';
 
 function SearchBox() {
   return <div className={classes.box}>SearchBox</div>;

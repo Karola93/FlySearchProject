@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import store from 'App/store';
 import App from './App/App';
 import reportWebVitals from './reportWebVitals';
-import './index.css';
+import 'index.scss';
 // eslint-disable-next-line import/order
 import { BrowserRouter } from 'react-router-dom';
 
