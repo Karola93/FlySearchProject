@@ -1,17 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import classes from './SearchBox.module.css';
 import Button from 'App/components/Reuse/Button';
 
 function SearchBox() {
+  const [oneWayClicked, setOneWayClicked] = useState(false);
+
+  const clickedWayHandler = () => {
+    setOneWayClicked(true);
+  };
+
   return (
     <form className={classes.search}>
       <div className={classes.margin}>
         <label>
-          <input type="radio" /> One way
+          <input type="radio" name="way" onClick={clickedWayHandler} /> One way
         </label>
         <label>
-          <input type="radio" /> Roundtrip
+          <input type="radio" name="way" /> Roundtrip
         </label>
       </div>
       <div className={classes.margin}>
@@ -24,8 +30,13 @@ function SearchBox() {
         <div>
           <label htmlFor="depart">Depart </label>
           <input type="text" id="to" />
-          <label htmlFor="return"> Return </label>
-          <input type="text" id="return" />
+          {!oneWayClicked && (
+            <label htmlFor="return">
+              {' '}
+              Return
+              <input type="text" id="return" />{' '}
+            </label>
+          )}
           <label htmlFor="travelers"> Travelers </label>
           <input type="number" id="travelers" min="1" style={{ width: 35 }} />
         </div>
