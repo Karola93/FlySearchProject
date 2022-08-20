@@ -1,12 +1,18 @@
-.box {
-    margin: 10px;
+.search {
     background-color: navajowhite;
     color: black;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2% 5%;
+    margin: 10px 20%;
+    padding: 7px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-    z-index: 10;
-    font-size: 25px;
+    font-size: 20px;
+    border-radius: 8px;
 }
+
+.margin {
+    margin: 4px;
+}
+
