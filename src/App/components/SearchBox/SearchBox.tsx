@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import classes from './SearchBox.module.css';
 import Button from 'App/components/Reuse/Button';
+import classes from 'App/components/SearchBox/SearchBox.module.scss';
 
 function SearchBox() {
   const [oneWayClicked, setOneWayClicked] = useState(false);

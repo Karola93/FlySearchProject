@@ -3,10 +3,11 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import Input from 'App/components/Reuse/Input';
-import classes from 'App/components/User/Auth.module.css';
+import classes from 'App/components/User/Auth.module.scss';
 import { authActions } from 'App/store/auth';
 import Button from 'App/components/Reuse/Button';
 import { useNavigate } from 'react-router-dom';
+import { useCookies } from 'react-cookie';
 
 function Auth() {
   const dispatch = useDispatch();
@@ -15,12 +16,14 @@ function Auth() {
     email: '',
     password: ''
   });
+  const [cookies, setCookies] = useCookies(['']);
 
   function loginHandler(e) {
     e.preventDefault();
     dispatch(authActions.login());
     navigate('/');
     localStorage.setItem('user', JSON.stringify(user));
+    setCookies('user', user);
   }
 
   return (

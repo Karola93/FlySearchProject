@@ -4,7 +4,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Image from 'App/components/Reuse/Image';
 import Button from 'App/components/Reuse/Button';
-import classes from './Header.module.css';
+import classes from 'App/components/Header/Header.module.scss';
 import { authActions } from '../../store/auth';
 
 function Header() {

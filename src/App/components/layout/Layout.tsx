@@ -1,6 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
-import classes from './Layout.module.css';
+import classes from 'App/components/layout/Layout.module.scss';
 import MainNavigation from './MainNavigation';
 
 function Layout({ children }) {

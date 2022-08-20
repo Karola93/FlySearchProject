@@ -2,12 +2,13 @@
 // @ts-nocheck
 
 import React, { useState } from 'react';
-import classes from 'App/components/User/SignIn.module.css';
+import classes from 'App/components/User/SignIn.module.scss';
 import Input from 'App/components/Reuse/Input';
 import Button from 'App/components/Reuse/Button';
 import { useNavigate } from 'react-router-dom';
 import { authActions } from 'App/store/auth';
 import { useDispatch } from 'react-redux';
+import { useCookies } from 'react-cookie';
 
 function SignIn() {
   const dispatch = useDispatch();
@@ -16,12 +17,14 @@ function SignIn() {
     email: '',
     password: ''
   });
+  const [cookies, setCookies] = useCookies(['']);
 
   function signinHandler(e) {
     e.preventDefault();
     dispatch(authActions.login());
     navigate('/');
     localStorage.setItem('newUser', JSON.stringify(newUser));
+    setCookies('newUser', newUser);
   }
 
   return (
