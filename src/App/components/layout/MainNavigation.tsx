@@ -1,6 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Button from 'App/components/Reuse/Button';
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -11,17 +11,22 @@ import logo from 'logo-1.png';
 
 function MainNavigation() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const isAuth = useSelector((state) => state.auth.isAuthenticated);
 
   const logoutHandler = () => {
     dispatch(authActions.logout());
   };
 
+  const homepageNavigationHandler = () => {
+    navigate('/');
+  };
+
   return (
     <header className={classes.header}>
       <div className={classes.logo}>
-        <Image src={logo} alt="logo" width="70px" height="70px" />
-        <h1>FlySearch</h1>
+        <Image src={logo} alt="logo" width="70px" height="70px" handler={homepageNavigationHandler} />
+        <h1 onClick={homepageNavigationHandler}>FlySearch</h1>
       </div>
       <nav>
         {!isAuth && (
