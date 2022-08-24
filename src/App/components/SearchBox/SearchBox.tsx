@@ -2,10 +2,15 @@ import React, { useState } from 'react';
 
 import Button from 'App/components/Reuse/Button';
 import classes from 'App/components/SearchBox/SearchBox.module.scss';
+import { useAppDispatch } from 'App/store/hooks';
+import { handleTravelers } from 'App/components/SearchBox/createTravelerSlice';
 
 function SearchBox() {
+  const dispatch = useAppDispatch();
   const [oneWayClicked, setOneWayClicked] = useState(false);
   const [roundtripClicked, setRoundtripClicked] = useState(false);
+
+  const [localTravelers, setLocalTravelers] = useState(0);
 
   const clickedWayHandler = () => {
     setOneWayClicked(true);
@@ -48,7 +53,14 @@ function SearchBox() {
             <label htmlFor="return"> Return </label>
             <input type="text" id="return" />
             <label htmlFor="travelers"> Travelers </label>
-            <input type="number" id="travelers" min="1" style={{ width: 35 }} />
+            <input
+              onChange={(event) => setLocalTravelers(parseInt(event.target.value))}
+              onBlur={() => dispatch(handleTravelers(localTravelers))}
+              type="number"
+              id="travelers"
+              min="1"
+              style={{ width: 35 }}
+            />
           </div>
         )}
       </div>
