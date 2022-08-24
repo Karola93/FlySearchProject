@@ -1,18 +1,19 @@
-import { stringify } from 'querystring';
-import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { getFlights } from 'App/components/SearchBox/travelersApi';
+import {createSlice, PayloadAction } from '@reduxjs/toolkit';
+
 
 export interface TravelData {
   from: string;
   where: string;
-  when: string;
+  whenDeparture: string;
+  whenArrival: string;
   travelers: number;
 }
 
 export const initialState: TravelData = {
   from: '',
   where: '',
-  when: '',
+  whenDeparture: '',
+  whenArrival: '',
   travelers: 0
 };
 
@@ -26,13 +27,19 @@ export const createTravelerSlice = createSlice({
     handleDestination: (state: TravelData, action) => {
       state.where = action.payload;
     },
-    handleFrom: (state: TravelData, action) => {
-      state.where = action.payload;
-    }
+    handleArrival: (state: TravelData, action) => {
+      state.from = action.payload;
+    },
+    handleDepartureDate: (state: TravelData, action) => {
+      state.whenDeparture = action.payload;
+    },
+    handleArrivalDate: (state: TravelData, action) => {
+      state.whenArrival = action.payload;
   }
+}
 });
 
-export const { handleTravelers, handleDestination, handleFrom } = createTravelerSlice.actions;
+export const { handleTravelers, handleDestination, handleArrival, handleDepartureDate, handleArrivalDate } = createTravelerSlice.actions;
 
 export const selectTravelers = (state: any): number => state.travelers;
 

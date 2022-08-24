@@ -11,8 +11,8 @@ import logo from 'logo-1.png';
 
 function MainNavigation() {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
   const isAuth = useSelector((state) => state.auth.isAuthenticated);
+    const navigate = useNavigate();
 
   const logoutHandler = () => {
     dispatch(authActions.logout());
