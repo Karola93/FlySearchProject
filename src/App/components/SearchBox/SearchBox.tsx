@@ -100,7 +100,7 @@ function SearchBox() {
                     </div>
                 )}
             </div>
-            <div style={{alignSelf: 'flex-end'}} className={classes.margin}>
+            <div className={classes.searchButton}>
                 <Button type="submit" text="Search"/>
             </div>
         </form>
