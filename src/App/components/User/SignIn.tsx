@@ -19,6 +19,11 @@ function SignIn() {
   });
   const [cookies, setCookies] = useCookies(['']);
 
+  if( localStorage.getItem('user')){
+    dispatch(authActions.login());
+    navigate('/');
+  }
+
   function signinHandler(e) {
     e.preventDefault();
     dispatch(authActions.login());

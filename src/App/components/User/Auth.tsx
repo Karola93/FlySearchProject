@@ -18,6 +18,7 @@ function Auth() {
   });
   const [cookies, setCookies] = useCookies(['']);
 
+
   function loginHandler(e) {
     e.preventDefault();
     dispatch(authActions.login());

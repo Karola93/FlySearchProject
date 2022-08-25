@@ -1,5 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 
@@ -13,7 +11,7 @@ function App() {
   return (
     <Layout>
       <Routes>
-        <Route path="/" exact element={<HomePage />}></Route>
+        <Route path="/" element={<HomePage />}></Route>
         <Route path="/auth" element={<Auth />}></Route>
         <Route path="/signin" element={<SignIn />}></Route>
         <Route path="/userProfile" element={<UserProfile />}></Route>
