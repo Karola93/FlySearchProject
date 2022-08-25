@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="048a2705-6e2e-4c94-81f1-7e80bed125e6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/components/SearchBox/SearchBox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/components/SearchBox/SearchBox.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/components/SearchBox/createTravelerSlice.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/components/SearchBox/createTravelerSlice.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/components/layout/MainNavigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/components/layout/MainNavigation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/store/index.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/store/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/store/store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="048a2705-6e2e-4c94-81f1-7e80bed125e6" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,7 +38,7 @@
       <option name="presentableId" value="Default" />
       <updated>1661333936747</updated>
       <workItem from="1661333938401" duration="9000" />
-      <workItem from="1661333951824" duration="6146000" />
+      <workItem from="1661333951824" duration="6512000" />
     </task>
     <servers />
   </component>
