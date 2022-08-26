@@ -4,14 +4,15 @@
     <list default="true" id="048a2705-6e2e-4c94-81f1-7e80bed125e6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/components/Header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/components/SearchBox/SearchBox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/components/SearchBox/SearchBox.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/components/SearchBox/createTravelerSlice.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/store/travelSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/components/SearchBox/travelersApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/API/travelersApi.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/components/Reuse/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/components/Reuse/Button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/components/Reuse/Image.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/components/Reuse/Image.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/components/Reuse/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/components/Reuse/Input.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/components/User/Auth.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/components/User/Auth.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/components/User/SignIn.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/components/User/SignIn.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/components/layout/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/components/layout/Layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/components/layout/MainNavigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/components/layout/MainNavigation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/store/createAuthSlice.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/store/authSlice.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/store/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/store/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/store/travelSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/store/travelSlice.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -1,15 +1,13 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Image from 'App/components/Reuse/Image';
 import Button from 'App/components/Reuse/Button';
 import classes from 'App/components/Header/Header.module.scss';
-import { authActions } from 'App/store/authSlice';
+import {authActions, AuthData} from 'App/store/authSlice';
 
 function Header() {
   const dispatch = useDispatch();
-  const isAuth = useSelector((state) => state.auth.isAuthenticated);
+  const isAuth = useSelector((state: AuthData) => state.isAuthenticated);
 
   const logoutHandler = () => {
     dispatch(authActions.logout());

@@ -24,16 +24,16 @@ export const travelSlice = createSlice({
     handleTravelers: (state: TravelData, action: PayloadAction<number>) => {
       state.travelers = action.payload;
     },
-    handleDestination: (state: TravelData, action) => {
+    handleDestination: (state: TravelData, action: PayloadAction<string>) => {
       state.where = action.payload;
     },
-    handleArrival: (state: TravelData, action) => {
+    handleArrival: (state: TravelData, action: PayloadAction<string>) => {
       state.from = action.payload;
     },
-    handleDepartureDate: (state: TravelData, action) => {
+    handleDepartureDate: (state: TravelData, action: PayloadAction<string>) => {
       state.whenDeparture = action.payload;
     },
-    handleArrivalDate: (state: TravelData, action) => {
+    handleArrivalDate: (state: TravelData, action: PayloadAction<string>) => {
       state.whenArrival = action.payload;
   }
 }
@@ -41,9 +41,9 @@ export const travelSlice = createSlice({
 
 export const { handleTravelers, handleDestination, handleArrival, handleDepartureDate, handleArrivalDate } = travelSlice.actions;
 
-export const selectTravelers = (state: any): number => state.travelers;
+export const selectTravelers = (state: TravelData): number => state.travelers;
 
-export const selectAllTravelData = (state: TravelData): any => {
+export const selectAllTravelData = (state: TravelData): TravelData => {
   const travelers = state.travelers;
   const from = state.from;
   const where = state.where;

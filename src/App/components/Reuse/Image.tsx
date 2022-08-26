@@ -1,8 +1,6 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
 import React from 'react';
 
-function Image(props) {
+function Image(props: any) {
   return (
     <img
       src={props.src}

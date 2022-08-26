@@ -1,7 +1,7 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 
 import authReducer, {AuthData} from 'App/store/authSlice';
-import createTravelerReducer, {TravelData} from "App/store/travelSlice";
+import createTravelerReducer, {TravelData} from 'App/store/travelSlice';
 
 export interface RootState {
   auth: AuthData,

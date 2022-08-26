@@ -1,17 +1,15 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
 import {Link, useNavigate} from 'react-router-dom';
 import Button from 'App/components/Reuse/Button';
 import React from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import Image from 'App/components/Reuse/Image';
-import {authActions} from 'App/store/authSlice';
+import {authActions, AuthData} from 'App/store/authSlice';
 import classes from 'App/components/layout/MainNavigation.module.scss';
 import logo from 'logo-1.png';
 
 function MainNavigation() {
     const dispatch = useDispatch();
-    const isAuth = useSelector((state) => state.auth.isAuthenticated);
+    const isAuth = useSelector((state: AuthData) => state.isAuthenticated);
     const navigate = useNavigate();
 
     if(localStorage.getItem('user')){

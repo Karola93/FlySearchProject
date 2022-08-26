@@ -1,5 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
 import React, { useState } from 'react';
 import classes from 'App/components/User/SignIn.module.scss';
 import Input from 'App/components/Reuse/Input';
@@ -12,18 +10,19 @@ import { useCookies } from 'react-cookie';
 function SignIn() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
   const [newUser, setNewUser] = useState({
     email: '',
     password: ''
   });
-  const [cookies, setCookies] = useCookies(['']);
+  const [cookies, setCookies] = useCookies();
 
   if( localStorage.getItem('user')){
     dispatch(authActions.login());
     navigate('/');
   }
 
-  function signinHandler(e) {
+  function signinHandler(e: any) {
     e.preventDefault();
     dispatch(authActions.login());
     navigate('/');
@@ -42,7 +41,7 @@ function SignIn() {
             type="email"
             id="email"
             value={newUser.email}
-            onChange={(e) =>
+            onChange={(e: any) =>
               setNewUser((user) => ({
                 ...user,
                 email: e.target.value
@@ -59,7 +58,7 @@ function SignIn() {
             value={newUser.password}
             id="password"
             min={8}
-            onChange={(e) =>
+            onChange={(e: any) =>
               setNewUser((user) => ({
                 ...user,
                 password: e.target.value

@@ -1,5 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import Input from 'App/components/Reuse/Input';
@@ -16,10 +14,10 @@ function Auth() {
     email: '',
     password: ''
   });
-  const [cookies, setCookies] = useCookies(['']);
+  const [cookies, setCookies] = useCookies();
 
 
-  function loginHandler(e) {
+  function loginHandler(e:any) {
     e.preventDefault();
     dispatch(authActions.login());
     navigate('/');
@@ -38,7 +36,7 @@ function Auth() {
             type="email"
             id="email"
             value={user.email}
-            onChange={(e) =>
+            onChange={(e:any) =>
               setUser((user) => ({
                 ...user,
                 email: e.target.value
@@ -55,7 +53,7 @@ function Auth() {
             value={user.password}
             id="password"
             min={8}
-            onChange={(e) =>
+            onChange={(e: any) =>
               setUser((user) => ({
                 ...user,
                 password: e.target.value
