@@ -17,7 +17,7 @@ export const initialState: TravelData = {
   travelers: 0
 };
 
-export const createTravelerSlice = createSlice({
+export const travelSlice = createSlice({
   name: 'createTraveler',
   initialState,
   reducers: {
@@ -39,21 +39,23 @@ export const createTravelerSlice = createSlice({
 }
 });
 
-export const { handleTravelers, handleDestination, handleArrival, handleDepartureDate, handleArrivalDate } = createTravelerSlice.actions;
+export const { handleTravelers, handleDestination, handleArrival, handleDepartureDate, handleArrivalDate } = travelSlice.actions;
 
 export const selectTravelers = (state: any): number => state.travelers;
 
-export const selectAllTravelData = (state: any): any => {
+export const selectAllTravelData = (state: TravelData): any => {
   const travelers = state.travelers;
   const from = state.from;
   const where = state.where;
-  const when = state.when;
+  const whenDeparture = state.whenDeparture;
+  const whenArrival = state.whenArrival;
   return {
     travelers,
     from,
     where,
-    when
+    whenDeparture,
+    whenArrival
   };
 };
 
-export default createTravelerSlice.reducer;
+export default travelSlice.reducer;

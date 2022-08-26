@@ -9,7 +9,7 @@ import {
     handleArrival,
     handleDepartureDate,
     handleArrivalDate
-} from 'App/components/SearchBox/createTravelerSlice';
+} from 'App/store/travelSlice';
 
 function SearchBox() {
     const dispatch = useAppDispatch();
