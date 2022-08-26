@@ -1,6 +1,6 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 
-import authReducer from './auth';
+import authReducer from 'App/store/createAuthSlice';
 import createTravelerReducer from "App/components/SearchBox/createTravelerSlice";
 
 const store = configureStore({

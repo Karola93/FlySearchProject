@@ -85,7 +85,7 @@ function SearchBox() {
                         <label htmlFor="return"> Return </label>
                         <input
                             onChange={(event) => setLocalArrivalDate(event.target.value)}
-                            onBlur={() => dispatch(handleArrivalDate(localArrival))}
+                            onBlur={() => dispatch(handleArrivalDate(localArrivalDate))}
                             type="text"
                             id="return"/>
                         <label htmlFor="travelers"> Travelers </label>
@@ -100,11 +100,15 @@ function SearchBox() {
                     </div>
                 )}
             </div>
-            <div style={{alignSelf: 'flex-end'}} className={classes.margin}>
+            <div className={classes.searchButton}>
                 <Button type="submit" text="Search"/>
             </div>
         </form>
     );
+
 }
+
+
+
 
 export default SearchBox;

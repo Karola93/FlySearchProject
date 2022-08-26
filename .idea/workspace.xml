@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="048a2705-6e2e-4c94-81f1-7e80bed125e6" name="Changes" comment="" />
+    <list default="true" id="048a2705-6e2e-4c94-81f1-7e80bed125e6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/components/User/SignIn.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/components/User/SignIn.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,6 +42,8 @@
       <updated>1661333936747</updated>
       <workItem from="1661333938401" duration="9000" />
       <workItem from="1661333951824" duration="6512000" />
+      <workItem from="1661454065146" duration="8040000" />
+      <workItem from="1661500130543" duration="3451000" />
     </task>
     <servers />
   </component>
@@ -55,17 +60,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/App/components/SearchBox/travelersApi.ts</url>
-          <line>6</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
