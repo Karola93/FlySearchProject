@@ -1,6 +1,5 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
-
 import React, { useState } from 'react';
 import classes from 'App/components/User/SignIn.module.scss';
 import Input from 'App/components/Reuse/Input';
