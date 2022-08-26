@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import Image from 'App/components/Reuse/Image';
 import Button from 'App/components/Reuse/Button';
 import classes from 'App/components/Header/Header.module.scss';
-import { authActions } from 'App/store/createAuthSlice';
+import { authActions } from 'App/store/authSlice';
 
 function Header() {
   const dispatch = useDispatch();

@@ -1,7 +1,12 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 
-import authReducer from 'App/store/createAuthSlice';
-import createTravelerReducer from "App/components/SearchBox/createTravelerSlice";
+import authReducer, {AuthData} from 'App/store/authSlice';
+import createTravelerReducer, {TravelData} from "App/store/travelSlice";
+
+export interface RootState {
+  auth: AuthData,
+  createTraveler: TravelData
+}
 
 const store = configureStore({
   reducer: { auth: authReducer, createTraveler: createTravelerReducer }

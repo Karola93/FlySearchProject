@@ -3,7 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="048a2705-6e2e-4c94-81f1-7e80bed125e6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/components/Header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/components/SearchBox/SearchBox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/components/SearchBox/SearchBox.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/components/SearchBox/createTravelerSlice.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/store/travelSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/components/SearchBox/travelersApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/API/travelersApi.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/components/User/Auth.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/components/User/Auth.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/components/User/SignIn.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/components/User/SignIn.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/components/layout/MainNavigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/components/layout/MainNavigation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/store/createAuthSlice.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/store/authSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/store/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/store/store.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +40,12 @@
     <property name="ts.external.directory.path" value="C:\Users\karol\OneDrive\Pulpit\flysearch\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\karol\OneDrive\Pulpit\flysearch\src\App\api" />
+      <recent name="C:\Users\karol\OneDrive\Pulpit\flysearch\src\App\store" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -43,7 +57,7 @@
       <workItem from="1661333938401" duration="9000" />
       <workItem from="1661333951824" duration="6512000" />
       <workItem from="1661454065146" duration="8040000" />
-      <workItem from="1661500130543" duration="3451000" />
+      <workItem from="1661500130543" duration="5525000" />
     </task>
     <servers />
   </component>
