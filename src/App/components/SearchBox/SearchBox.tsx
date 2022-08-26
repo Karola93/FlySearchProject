@@ -85,7 +85,7 @@ function SearchBox() {
                         <label htmlFor="return"> Return </label>
                         <input
                             onChange={(event) => setLocalArrivalDate(event.target.value)}
-                            onBlur={() => dispatch(handleArrivalDate(localArrival))}
+                            onBlur={() => dispatch(handleArrivalDate(localArrivalDate))}
                             type="text"
                             id="return"/>
                         <label htmlFor="travelers"> Travelers </label>
@@ -105,6 +105,10 @@ function SearchBox() {
             </div>
         </form>
     );
+
 }
+
+
+
 
 export default SearchBox;
